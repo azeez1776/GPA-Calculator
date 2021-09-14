@@ -31,6 +31,11 @@ export default function App() {
 
   }
 
+  const handleBack = () => {
+    setGpa(null);
+    setMarksList([])
+  }
+
   const handleCompute = () => {
     let totalCredit = 0;
     let totalGradeCredit = 0;
@@ -56,8 +61,23 @@ export default function App() {
         <Text style={styles.title}>GPA CALCULATOR</Text>
       </View>
       <View style={styles.main}>
-        <ScrollView style={{ height: 500 }}>
-          {gpa ? <Text style={styles.gpa}>{gpa}</Text> : (
+        <ScrollView style={{ height: 500, zIndex: 1 }}>
+          {gpa ? (
+            <View>
+              <TouchableOpacity
+                onPress={handleBack}
+              >
+                <View style={styles.back}>
+                  <Text style={styles.backtext}>
+                    Back
+                  </Text>
+                </View>
+              </TouchableOpacity>
+
+              <Text style={styles.gpa}>{gpa}</Text>
+            </View>
+
+          ) : (
             marksList.map((value, index) => {
               return (
                 <TouchableOpacity
@@ -74,49 +94,72 @@ export default function App() {
           }
         </ScrollView>
       </View>
-      <View style={styles.textarea}>
-        <TextInput
-          style={styles.gradearea}
-          placeholder={" Enter Grade"}
-          value={marks.grade}
-          onChangeText={text => setMarks({ ...marks, grade: text })}
-        />
-        <TextInput
-          style={styles.creditarea}
-          placeholder={" Enter Credit"}
-          value={marks.credit}
-          keyboardType="numeric"
-          onChangeText={text => setMarks({ ...marks, credit: text })}
-        />
-      </View>
-      <View style={styles.addArea}>
-        <TouchableOpacity
-          onPress={handlePress}
-        >
-          <View style={styles.add}>
-            <Text style={styles.addtext}>
-              Add
-            </Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={handleCompute}
-        >
-          <View style={styles.comp}>
-            <Text style={styles.comptext}>
-              Compute
-            </Text>
-          </View>
-        </TouchableOpacity>
+      <View style={{ flex: 1 }}>
+        <View style={styles.textarea}>
+          <TextInput
+            style={styles.gradearea}
+            placeholder={" Enter Grade"}
+            value={marks.grade}
+            onChangeText={text => setMarks({ ...marks, grade: text })}
+          />
+          <TextInput
+            style={styles.creditarea}
+            placeholder={" Enter Credit"}
+            value={marks.credit}
+            keyboardType="numeric"
+            onChangeText={text => setMarks({ ...marks, credit: text })}
+          />
+        </View>
+        <View style={styles.addArea}>
+          <TouchableOpacity
+            onPress={handlePress}
+          >
+            <View style={styles.add}>
+              <Text style={styles.addtext}>
+                Add
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={handleCompute}
+          >
+            <View style={styles.comp}>
+              <Text style={styles.comptext}>
+                Compute
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  back: {
+    backgroundColor: '#590d22',
+    width: 100,
+    height: 50,
+    borderRadius: 10,
+    paddingTop: 10,
+    display: 'flex',
+    alignItems: 'center',
+  },
+  backtext: {
+    color: '#ffffff',
+    textAlign: 'center',
+    fontSize: 20,
+  },
+
   gpa: {
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 100,
+    position: 'relative',
+    left: -20,
+    top: 50,
+    width: '100%',
+    height: '100%',
+    padding: 100
   },
   addArea: {
     position: 'absolute',
@@ -143,7 +186,6 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 10,
     paddingTop: 5,
-    fontSize: 25,
     display: 'flex',
     alignItems: 'center',
   },
@@ -185,7 +227,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 660,
     flex: 1,
-    zIndex: 1
+    margin: 0
   },
 
   gradearea: {
