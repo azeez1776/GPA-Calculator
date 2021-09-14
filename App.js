@@ -24,6 +24,13 @@ export default function App() {
     });
   }
 
+  const handleRemove = (index) => {
+    let marksListed = [...marksList];
+    marksListed.splice(index, 1);
+    setMarksList(marksListed);
+
+  }
+
   const handleCompute = () => {
     let totalCredit = 0;
     let totalGradeCredit = 0;
@@ -43,7 +50,6 @@ export default function App() {
     setGpa(Math.round((totalGradeCredit / totalCredit) * 10) / 10);
   }
 
-
   return (
     <View style={styles.container}>
       <View style={styles.titleWrapper}>
@@ -52,13 +58,16 @@ export default function App() {
       <View style={styles.main}>
         <ScrollView style={{ height: 500 }}>
           {gpa ? <Text style={styles.gpa}>{gpa}</Text> : (
-            marksList.map((value, key) => {
+            marksList.map((value, index) => {
               return (
                 <TouchableOpacity
-                  key={key}
+                  style={styles.flow}
+                  key={index}
+                  onPress={handleRemove}
                 >
                   <GpaInput grade={value.grade} credit={value.credit} />
                 </TouchableOpacity>
+
               )
             })
           )
@@ -76,6 +85,7 @@ export default function App() {
           style={styles.creditarea}
           placeholder={" Enter Credit"}
           value={marks.credit}
+          keyboardType="numeric"
           onChangeText={text => setMarks({ ...marks, credit: text })}
         />
       </View>
@@ -99,8 +109,6 @@ export default function App() {
           </View>
         </TouchableOpacity>
       </View>
-
-
     </View>
   );
 }
@@ -110,23 +118,19 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 30,
   },
-  board: {
-    display: 'flex',
-  },
   addArea: {
     position: 'absolute',
     top: 730,
-    zIndex: 1,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
+    flex: 1,
   },
   addtext: {
     color: '#ffffff',
     textAlign: 'center',
     fontSize: 25,
-
   },
   comptext: {
     color: '#ffffff',
@@ -158,12 +162,11 @@ const styles = StyleSheet.create({
     top: 50,
     left: 50,
     fontSize: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   container: {
     flex: 1,
     backgroundColor: '#cddafd',
-
   },
   main: {
     display: 'flex',
@@ -177,11 +180,14 @@ const styles = StyleSheet.create({
   textarea: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-end',
     marginLeft: 35,
     position: 'absolute',
     top: 660,
+    flex: 1,
+    zIndex: 1
   },
+
   gradearea: {
     backgroundColor: '#ffffff',
     width: 150,
@@ -199,5 +205,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     fontSize: 25,
     paddingTop: 5,
-  }
+  },
+  // titleWrapper: {
+  //   backgroundColor: '#03071e',
+  //   width: '100%',
+  //   height: '13%'
+  // }
 });
