@@ -154,18 +154,15 @@ const styles = StyleSheet.create({
   gpa: {
     fontWeight: 'bold',
     fontSize: 100,
-    position: 'relative',
-    left: -20,
-    top: 50,
     width: '100%',
     height: '100%',
     padding: 100
   },
   addArea: {
-    position: 'absolute',
-    top: 730,
     display: 'flex',
+    paddingBottom: 10,
     flexDirection: 'row',
+    alignItems: 'flex-end',
     justifyContent: 'space-around',
     width: '100%',
     flex: 1,
@@ -224,8 +221,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-end',
     marginLeft: 35,
-    position: 'absolute',
-    top: 660,
     flex: 1,
     margin: 0
   },
