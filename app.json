@@ -2,6 +2,8 @@
   "expo": {
     "name": "gpaCalcApp",
     "slug": "gpaCalcApp",
+    "sdkVersion":"42.0.0",
+    "platforms":["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,6 +22,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package":"com.azeez.GPAKALU",
+      "permissions":[ "WRITE_EXTERNAL_STORAGE" ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
