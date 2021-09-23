@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     wrapper: {
         display: 'flex',
         flexDirection: 'row',
-        marginBottom: 15,
         flex: 1
     },
     grade: {

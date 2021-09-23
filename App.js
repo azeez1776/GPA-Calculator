@@ -61,7 +61,7 @@ export default function App() {
         <Text style={styles.title}>GPA CALCULATOR</Text>
       </View>
       <View style={styles.main}>
-        <ScrollView style={{ height: 500, zIndex: 1 }}>
+        <ScrollView style={{ height: 450, zIndex: 1 }}>
           {gpa ? (
             <View>
               <TouchableOpacity
@@ -85,7 +85,7 @@ export default function App() {
                   key={index}
                   onPress={handleRemove}
                 >
-                  <GpaInput grade={value.grade} credit={value.credit} />
+                  <GpaInput style={styles.gpaIn} grade={value.grade} credit={value.credit} />
                 </TouchableOpacity>
 
               )
@@ -93,49 +93,72 @@ export default function App() {
           )
           }
         </ScrollView>
+
       </View>
-      <View style={{ flex: 1 }}>
-        <View style={styles.textarea}>
-          <TextInput
-            style={styles.gradearea}
-            placeholder={" Enter Grade"}
-            value={marks.grade}
-            onChangeText={text => setMarks({ ...marks, grade: text })}
-          />
-          <TextInput
-            style={styles.creditarea}
-            placeholder={" Enter Credit"}
-            value={marks.credit}
-            keyboardType="numeric"
-            onChangeText={text => setMarks({ ...marks, credit: text })}
-          />
-        </View>
-        <View style={styles.addArea}>
-          <TouchableOpacity
-            onPress={handlePress}
-          >
-            <View style={styles.add}>
-              <Text style={styles.addtext}>
-                Add
-              </Text>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.container}
+      >
+        <View style={{ flex: 1 }}>
+
+          <View style={styles.addArea}>
+            <View style={styles.partOne}>
+              <TextInput
+                style={styles.gradearea}
+                placeholder={" Enter Grade"}
+                value={marks.grade}
+                onChangeText={text => setMarks({ ...marks, grade: text })}
+              />
+              <TextInput
+                style={styles.creditarea}
+                placeholder={" Enter Credit"}
+                value={marks.credit}
+                keyboardType="numeric"
+                onChangeText={text => setMarks({ ...marks, credit: text })}
+              />
             </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={handleCompute}
-          >
-            <View style={styles.comp}>
-              <Text style={styles.comptext}>
-                Compute
-              </Text>
+            <View style={styles.partTwo}>
+              <TouchableOpacity
+                onPress={handlePress}
+              >
+                <View style={styles.add}>
+                  <Text style={styles.addtext}>
+                    Add
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={handleCompute}
+              >
+                <View style={styles.comp}>
+                  <Text style={styles.comptext}>
+                    Compute
+                  </Text>
+                </View>
+              </TouchableOpacity>
             </View>
-          </TouchableOpacity>
+          </View>
         </View>
-      </View>
+      </KeyboardAvoidingView>
     </View>
+
   );
 }
 
 const styles = StyleSheet.create({
+  partOne: {
+    display: 'flex',
+    flexDirection: 'row',
+    paddingBottom: 10,
+    justifyContent: 'space-around',
+    width: '100%'
+  },
+  partTwo: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '100%'
+  },
   back: {
     backgroundColor: '#590d22',
     width: 100,
@@ -160,10 +183,9 @@ const styles = StyleSheet.create({
   },
   addArea: {
     display: 'flex',
-    paddingBottom: 10,
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    justifyContent: 'space-around',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
     width: '100%',
     flex: 1,
   },
@@ -183,8 +205,8 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 10,
     paddingTop: 5,
-    display: 'flex',
-    alignItems: 'center',
+    // display: 'flex',
+    // alignItems: 'center',
   },
   comp: {
     backgroundColor: '#f72585',
@@ -193,8 +215,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingTop: 5,
     fontSize: 25,
-    display: 'flex',
-    alignItems: 'center',
+    // display: 'flex',
+    // alignItems: 'center',
   },
   title: {
     position: 'absolute',
@@ -211,18 +233,16 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'absolute',
-    top: 150,
-    left: 40,
+
 
   },
   textarea: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'flex-end',
-    marginLeft: 35,
+    alignItems: 'flex-end',
+    justifyContent: 'space-around',
+    width: '100%',
     flex: 1,
-    margin: 0
   },
 
   gradearea: {
@@ -235,7 +255,6 @@ const styles = StyleSheet.create({
 
   },
   creditarea: {
-    marginLeft: 10,
     backgroundColor: '#ffffff',
     width: 150,
     height: 50,
