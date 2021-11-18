@@ -8,6 +8,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 export default function App() {
 
+  const Stack = createStackNavigator();
+
   const [marks, setMarks] = useState({
     grade: '',
     credit: ''
