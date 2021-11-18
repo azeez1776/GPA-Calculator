@@ -23,7 +23,14 @@ export default function App() {
       >
         <Stack.Screen
           name='Home'
-          component={ }
+          component={Calc}
+          options={{
+            title: 'GPA Kaluu',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30
+            }
+          }}
         />
 
       </Stack.Navigator>
