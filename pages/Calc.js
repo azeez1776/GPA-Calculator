@@ -60,8 +60,7 @@ export default function Calc({ navigation, route }) {
         <View style={styles.container}>
             <View style={styles.main}>
                 <View style={{ flex: 1 }}>
-
-                    <View style={styles.addArea}>
+                    <View style={styles.operations}>
                         <View style={styles.partOne}>
                             <TextInput
                                 style={styles.gradearea}
@@ -99,7 +98,7 @@ export default function Calc({ navigation, route }) {
                         </View>
                     </View>
                 </View>
-                <ScrollView style={{ height: 450, zIndex: 1 }}>
+                <ScrollView style={{ height: 350, zIndex: 1 }}>
                     {gpa ? (
                         <View>
                             <TouchableOpacity
@@ -143,6 +142,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         paddingBottom: 10,
+        marginBottom: 10,
         justifyContent: 'space-around',
         width: '100%'
     },
@@ -219,6 +219,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        flex: 1
 
 
     },
@@ -273,4 +274,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
 
     },
+    operations: {
+        marginTop: 15
+    }
 });
