@@ -59,6 +59,46 @@ export default function Calc({ navigation, route }) {
     return (
         <View style={styles.container}>
             <View style={styles.main}>
+                <View style={{ flex: 1 }}>
+
+                    <View style={styles.addArea}>
+                        <View style={styles.partOne}>
+                            <TextInput
+                                style={styles.gradearea}
+                                placeholder={" Enter Grade"}
+                                value={marks.grade}
+                                onChangeText={text => setMarks({ ...marks, grade: text })}
+                            />
+                            <TextInput
+                                style={styles.creditarea}
+                                placeholder={" Enter Credit"}
+                                value={marks.credit}
+                                keyboardType="numeric"
+                                onChangeText={text => setMarks({ ...marks, credit: text })}
+                            />
+                        </View>
+                        <View style={styles.partTwo}>
+                            <TouchableOpacity
+                                onPress={handlePress}
+                            >
+                                <View style={styles.add}>
+                                    <Text style={styles.addtext}>
+                                        Add
+                                    </Text>
+                                </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                onPress={handleCompute}
+                            >
+                                <View style={styles.comp}>
+                                    <Text style={styles.comptext}>
+                                        Compute
+                                    </Text>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
                 <ScrollView style={{ height: 450, zIndex: 1 }}>
                     {gpa ? (
                         <View>
@@ -92,46 +132,6 @@ export default function Calc({ navigation, route }) {
                     }
                 </ScrollView>
 
-            </View>
-            <View style={{ flex: 1 }}>
-
-                <View style={styles.addArea}>
-                    <View style={styles.partOne}>
-                        <TextInput
-                            style={styles.gradearea}
-                            placeholder={" Enter Grade"}
-                            value={marks.grade}
-                            onChangeText={text => setMarks({ ...marks, grade: text })}
-                        />
-                        <TextInput
-                            style={styles.creditarea}
-                            placeholder={" Enter Credit"}
-                            value={marks.credit}
-                            keyboardType="numeric"
-                            onChangeText={text => setMarks({ ...marks, credit: text })}
-                        />
-                    </View>
-                    <View style={styles.partTwo}>
-                        <TouchableOpacity
-                            onPress={handlePress}
-                        >
-                            <View style={styles.add}>
-                                <Text style={styles.addtext}>
-                                    Add
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            onPress={handleCompute}
-                        >
-                            <View style={styles.comp}>
-                                <Text style={styles.comptext}>
-                                    Compute
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-                </View>
             </View>
         </View>
 
