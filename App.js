@@ -17,7 +17,7 @@ export default function App() {
         screenOptions={{
           headerTintColor: '#ffffff',
           headerStyle: {
-            backgroundColor: '#1d3557'
+            backgroundColor: '#03071e'
           }
         }}
       >

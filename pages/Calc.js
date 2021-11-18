@@ -58,9 +58,6 @@ export default function Calc({ navigation, route }) {
 
     return (
         <View style={styles.container}>
-            <View style={styles.titleWrapper}>
-                <Text style={styles.title}>GPA CALCULATOR</Text>
-            </View>
             <View style={styles.main}>
                 <ScrollView style={{ height: 450, zIndex: 1 }}>
                     {gpa ? (
