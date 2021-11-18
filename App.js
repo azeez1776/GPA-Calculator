@@ -11,7 +11,18 @@ export default function App() {
   const Stack = createStackNavigator();
 
   return (
-    
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName='Home'
+        screenOptions={{
+          headerTintColor: '#ffffff',
+          headerStyle: {
+            backgroundColor: '#1d3557'
+          }
+        }}
+      >
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 
 }
