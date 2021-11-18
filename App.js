@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import GpaInput from './components/GpaInput';
 
+
 export default function App() {
 
   const [marks, setMarks] = useState({
@@ -95,51 +96,46 @@ export default function App() {
         </ScrollView>
 
       </View>
-      <KeyboardAvoidingView
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={styles.container}
-      >
-        <View style={{ flex: 1 }}>
+      <View style={{ flex: 1 }}>
 
-          <View style={styles.addArea}>
-            <View style={styles.partOne}>
-              <TextInput
-                style={styles.gradearea}
-                placeholder={" Enter Grade"}
-                value={marks.grade}
-                onChangeText={text => setMarks({ ...marks, grade: text })}
-              />
-              <TextInput
-                style={styles.creditarea}
-                placeholder={" Enter Credit"}
-                value={marks.credit}
-                keyboardType="numeric"
-                onChangeText={text => setMarks({ ...marks, credit: text })}
-              />
-            </View>
-            <View style={styles.partTwo}>
-              <TouchableOpacity
-                onPress={handlePress}
-              >
-                <View style={styles.add}>
-                  <Text style={styles.addtext}>
-                    Add
-                  </Text>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={handleCompute}
-              >
-                <View style={styles.comp}>
-                  <Text style={styles.comptext}>
-                    Compute
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            </View>
+        <View style={styles.addArea}>
+          <View style={styles.partOne}>
+            <TextInput
+              style={styles.gradearea}
+              placeholder={" Enter Grade"}
+              value={marks.grade}
+              onChangeText={text => setMarks({ ...marks, grade: text })}
+            />
+            <TextInput
+              style={styles.creditarea}
+              placeholder={" Enter Credit"}
+              value={marks.credit}
+              keyboardType="numeric"
+              onChangeText={text => setMarks({ ...marks, credit: text })}
+            />
+          </View>
+          <View style={styles.partTwo}>
+            <TouchableOpacity
+              onPress={handlePress}
+            >
+              <View style={styles.add}>
+                <Text style={styles.addtext}>
+                  Add
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={handleCompute}
+            >
+              <View style={styles.comp}>
+                <Text style={styles.comptext}>
+                  Compute
+                </Text>
+              </View>
+            </TouchableOpacity>
           </View>
         </View>
-      </KeyboardAvoidingView>
+      </View>
     </View>
 
   );
@@ -218,13 +214,6 @@ const styles = StyleSheet.create({
     // display: 'flex',
     // alignItems: 'center',
   },
-  title: {
-    position: 'absolute',
-    top: 50,
-    left: 50,
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
   container: {
     flex: 1,
     backgroundColor: '#cddafd',
@@ -262,9 +251,29 @@ const styles = StyleSheet.create({
     fontSize: 25,
     paddingTop: 5,
   },
-  // titleWrapper: {
-  //   backgroundColor: '#03071e',
-  //   width: '100%',
-  //   height: '13%'
-  // }
+  titleWrapper: {
+    backgroundColor: '#03071e',
+    margin: 0,
+    padding: 0,
+    paddingBottom: 60,
+    marginBottom: 20,
+    flexDirection: 'row',
+    flex: 0.3,
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+
+
+  },
+  title: {
+    color: 'white',
+    margin: 0,
+    paddingTop: 30,
+    paddingLeft: 20,
+    flex: 1,
+    fontSize: 20,
+    fontWeight: 'bold'
+
+  },
 });
