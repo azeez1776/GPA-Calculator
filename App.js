@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import Calc from './pages/Calc';
 
 
 export default function App() {
@@ -20,6 +21,11 @@ export default function App() {
           }
         }}
       >
+        <Stack.Screen
+          name='Home'
+          component={ }
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   )
