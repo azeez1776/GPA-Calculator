@@ -275,6 +275,7 @@ const styles = StyleSheet.create({
 
     },
     operations: {
-        marginTop: 15
+        marginTop: 15,
+        zIndex: 2
     }
 });
