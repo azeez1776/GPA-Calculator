@@ -98,7 +98,7 @@ export default function Calc({ navigation, route }) {
                         </View>
                     </View>
                 </View>
-                <ScrollView style={{ height: 350, zIndex: 1 }}>
+                <ScrollView style={{ height: 50, zIndex: 1 }}>
                     {gpa ? (
                         <View>
                             <TouchableOpacity
@@ -275,7 +275,13 @@ const styles = StyleSheet.create({
 
     },
     operations: {
+        flex: 1,
         marginTop: 15,
-        zIndex: 2
+        zIndex: 2,
+        backgroundColor: '#cddafd',
+        justifyContent: 'center'
+    },
+    flow: {
+        margin: 5
     }
 });
