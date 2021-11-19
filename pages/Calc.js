@@ -141,7 +141,8 @@ export default function Calc({ navigation, route }) {
 const styles = StyleSheet.create({
     result: {
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     partOne: {
         display: 'flex',
@@ -163,7 +164,6 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 10,
         paddingTop: 10,
-        display: 'flex',
         alignItems: 'center',
     },
     backtext: {
@@ -175,9 +175,6 @@ const styles = StyleSheet.create({
     gpa: {
         fontWeight: 'bold',
         fontSize: 100,
-        width: '100%',
-        height: '100%',
-        padding: 100
     },
     addArea: {
         display: 'flex',
