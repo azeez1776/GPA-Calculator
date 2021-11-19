@@ -4,6 +4,7 @@ import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, Touchabl
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Calc from './pages/Calc';
+import Detail from './pages/Detail';
 
 
 export default function App() {
@@ -24,6 +25,17 @@ export default function App() {
         <Stack.Screen
           name='Home'
           component={Calc}
+          options={{
+            title: 'GPA Kaluu',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30
+            }
+          }}
+        />
+        <Stack.Screen
+          name='Detail'
+          component={Detail}
           options={{
             title: 'GPA Kaluu',
             headerTitleStyle: {
