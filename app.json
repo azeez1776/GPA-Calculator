@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "gpaCalcApp",
-    "slug": "gpaCalcApp",
+    "name": "Kaluu",
+    "slug": "Kaluu",
     "sdkVersion":"42.0.0",
     "platforms":["ios", "android", "web"],
     "version": "1.0.0",
