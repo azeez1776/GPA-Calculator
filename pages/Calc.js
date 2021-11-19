@@ -241,6 +241,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         fontSize: 25,
         paddingTop: 5,
+        textAlign: 'center'
 
     },
     creditarea: {
@@ -250,6 +251,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         fontSize: 25,
         paddingTop: 5,
+        textAlign: 'center'
     },
     titleWrapper: {
         backgroundColor: '#03071e',
