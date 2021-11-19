@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import GpaInput from '../components/GpaInput';
 
 
@@ -38,6 +38,7 @@ export default function Calc({ navigation, route }) {
     }
 
     const handleCompute = () => {
+        Keyboard.dismiss();
         let totalCredit = 0;
         let totalGradeCredit = 0;
         for (let i = 0; i < marksList.length; i++) {
@@ -59,7 +60,7 @@ export default function Calc({ navigation, route }) {
     return (
         <View style={styles.container}>
             <View style={styles.main}>
-                <View style={gpa ? { display: none } : { flex: 1 }}>
+                <View style={gpa ? { display: 'none' } : { flex: 1 }}>
                     <View style={styles.operations}>
                         <View style={styles.partOne}>
                             <TextInput
@@ -98,24 +99,24 @@ export default function Calc({ navigation, route }) {
                         </View>
                     </View>
                 </View>
-                <ScrollView style={{ height: 50, zIndex: 1 }}>
-                    {gpa ? (
-                        <View>
-                            <TouchableOpacity
-                                onPress={handleBack}
-                            >
-                                <View style={styles.back}>
-                                    <Text style={styles.backtext}>
-                                        Back
-                                    </Text>
-                                </View>
-                            </TouchableOpacity>
+                {gpa ? (
+                    <View style={styles.result}>
 
-                            <Text style={styles.gpa}>{gpa}</Text>
-                        </View>
+                        <Text style={styles.gpa}>{gpa}</Text>
+                        <TouchableOpacity
+                            onPress={handleBack}
+                        >
+                            <View style={styles.back}>
+                                <Text style={styles.backtext}>
+                                    Back
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
 
-                    ) : (
-                        marksList.map((value, index) => {
+                ) : (
+                    <ScrollView style={{ height: 50, zIndex: 1 }}>
+                        {marksList.map((value, index) => {
                             return (
                                 <TouchableOpacity
                                     style={styles.flow}
@@ -126,10 +127,10 @@ export default function Calc({ navigation, route }) {
                                 </TouchableOpacity>
 
                             )
-                        })
-                    )
-                    }
-                </ScrollView>
+                        })}
+                    </ScrollView>
+                )
+                }
 
             </View>
         </View>
@@ -138,6 +139,10 @@ export default function Calc({ navigation, route }) {
 }
 
 const styles = StyleSheet.create({
+    result: {
+        flex: 1,
+        justifyContent: 'center'
+    },
     partOne: {
         display: 'flex',
         flexDirection: 'row',
