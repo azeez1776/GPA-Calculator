@@ -59,7 +59,7 @@ export default function Calc({ navigation, route }) {
     return (
         <View style={styles.container}>
             <View style={styles.main}>
-                <View style={{ flex: 1 }}>
+                <View style={gpa ? { display: none } : { flex: 1 }}>
                     <View style={styles.operations}>
                         <View style={styles.partOne}>
                             <TextInput
