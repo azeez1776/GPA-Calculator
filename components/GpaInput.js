@@ -20,7 +20,7 @@ const GpaInput = ({ grade, credit, remove }) => {
 
 const styles = StyleSheet.create({
     remove: {
-        backgroundColor: 'red',
+        backgroundColor: '#d00000',
         width: 30,
         height: 30,
         borderRadius: 30,
