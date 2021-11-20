@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: '#cddafd',
+        backgroundColor: '#ffffff',
     },
     main: {
         display: 'flex',
@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 15,
         zIndex: 2,
-        backgroundColor: '#cddafd',
+        backgroundColor: '#ffffff',
         justifyContent: 'center'
     },
     flow: {
