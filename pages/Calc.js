@@ -235,7 +235,7 @@ const styles = StyleSheet.create({
     },
 
     gradearea: {
-        backgroundColor: '#ffffff',
+        backgroundColor: '#eff6ee',
         width: 150,
         height: 50,
         borderRadius: 10,
@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
 
     },
     creditarea: {
-        backgroundColor: '#ffffff',
+        backgroundColor: '#eff6ee',
         width: 150,
         height: 50,
         borderRadius: 10,
