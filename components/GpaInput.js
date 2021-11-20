@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     grade: {
-        backgroundColor: '#ffffff',
+        backgroundColor: '#eff6ee',
         marginRight: 10,
         width: 130,
         height: 50,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         paddingTop: 5
     },
     credit: {
-        backgroundColor: '#ffffff',
+        backgroundColor: '#eff6ee',
         marginRight: 10,
         width: 130,
         height: 50,
