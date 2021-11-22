@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import GpaInput from '../components/GpaInput';
+import RNPickerSelect from 'react-native-picker-select';
+
 
 
 export default function Calc({ navigation, route }) {
@@ -14,6 +16,7 @@ export default function Calc({ navigation, route }) {
     const [marksList, setMarksList] = useState([]);
 
     const [gpa, setGpa] = useState(null);
+    // const [gpaDecl, setGpaDecl] = useState('');
 
 
     const handlePress = () => {
@@ -57,24 +60,24 @@ export default function Calc({ navigation, route }) {
         setGpa(Math.round((totalGradeCredit / totalCredit) * 10) / 10);
     }
 
-    const gpaClass = (value) => {
-        if (4.3 >= value >= 3.5) {
-            return 'Upper Second Class GPA'
-        }
-        else if (3.4 >= value >= 2.7) {
-            return 'Lower Second Class GPA'
-        }
-        else if (2.6 >= value >= 2.0) {
-            return 'Pass'
-        }
-        else if (value < 2.0) {
-            return 'This is not the end'
-        }
-        else {
-            return 'First Class GPA'
-        }
+    // const gpaClass = (value) => {
+    //     if (4.3 >= value >= 3.5) {
+    //         return 'Upper Second Class GPA'
+    //     }
+    //     else if (3.4 >= value >= 2.7) {
+    //         return 'Lower Second Class GPA'
+    //     }
+    //     else if (2.6 >= value >= 2.0) {
+    //         return 'Pass'
+    //     }
+    //     else if (value < 2.0) {
+    //         return 'This is not the end'
+    //     }
+    //     else {
+    //         return 'First Class GPA'
+    //     }
 
-    }
+    // }
 
     return (
         <View style={styles.container}>
@@ -88,6 +91,14 @@ export default function Calc({ navigation, route }) {
                                 value={marks.grade}
                                 onChangeText={text => setMarks({ ...marks, grade: text })}
                             />
+                            {/* <RNPickerSelect
+                                onValueChange={(value) => console.log(value)}
+                                items={[
+                                    { label: 'Football', value: 'football' },
+                                    { label: 'Baseball', value: 'baseball' },
+                                    { label: 'Hockey', value: 'hockey' },
+                                ]}
+                            /> */}
                             <TextInput
                                 style={styles.creditarea}
                                 placeholder={" Enter Credit"}
@@ -122,7 +133,7 @@ export default function Calc({ navigation, route }) {
                     <View style={styles.result}>
 
                         <Text style={styles.gpa}>{gpa}</Text>
-                        <Text>{gpaClass(gpa)}</Text>
+                        {/* <Text>{gpaDecl}</Text> */}
                         <TouchableOpacity
                             onPress={handleBack}
                         >
