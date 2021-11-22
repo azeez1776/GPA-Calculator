@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     back: {
-        backgroundColor: '#590d22',
+        backgroundColor: '#370617',
         width: 100,
         height: 50,
         borderRadius: 10,
