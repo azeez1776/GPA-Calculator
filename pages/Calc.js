@@ -114,9 +114,9 @@ export default function Calc({ navigation, route }) {
                                     <View style={styles.picker}>
                                         <Picker
                                             style={{ height: 50, width: '100%' }}
-                                            selectedValue={grade}
+                                            selectedValue={marks.grade}
                                             onValueChange={(itemValue, itemIndex) =>
-                                                setGrade(itemValue)
+                                                setMarks({ ...marks, grade: itemValue })
                                             }>
                                             <Picker.Item label="A" value="A" />
                                             <Picker.Item label="B+" value="B+" />
