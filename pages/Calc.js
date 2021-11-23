@@ -104,7 +104,6 @@ export default function Calc({ navigation, route }) {
                                 transparent={true}
                                 visible={gradeModal}
                                 onRequestClose={() => {
-                                    Alert.alert('Modal has been closed.');
                                     setGradeModal(!gradeModal);
                                 }}>
                                 <View
@@ -116,10 +115,8 @@ export default function Calc({ navigation, route }) {
                                             style={{ height: 50, width: '100%' }}
                                             selectedValue={marks.grade}
                                             onValueChange={(itemValue, itemIndex) => {
-                                                if (!itemValue) {
-                                                    return;
-                                                }
                                                 setMarks({ ...marks, grade: itemValue })
+                                                setGradeModal(!gradeModal)
                                             }
                                             }>
                                             <Picker.Item label="Enter Grade" value="" />
