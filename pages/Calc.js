@@ -90,12 +90,6 @@ export default function Calc({ navigation, route }) {
                 <View style={gpa ? { display: 'none' } : { flex: 1 }}>
                     <View style={styles.operations}>
                         <View style={styles.partOne}>
-                            <TextInput
-                                style={styles.gradearea}
-                                placeholder={" Enter Grade"}
-                                value={marks.grade}
-                                onChangeText={text => setMarks({ ...marks, grade: text })}
-                            />
                             <TouchableOpacity
                                 style={styles.gpaBtn}
                                 onPress={() => setGradeModal(true)}
