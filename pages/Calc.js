@@ -91,7 +91,7 @@ export default function Calc({ navigation, route }) {
                     <View style={styles.operations}>
                         <View style={styles.partOne}>
                             <TouchableOpacity
-                                style={styles.gpaBtn}
+                                style={styles.gradearea}
                                 onPress={() => setGradeModal(true)}
 
                             >
