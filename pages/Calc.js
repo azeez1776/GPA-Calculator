@@ -118,6 +118,7 @@ export default function Calc({ navigation, route }) {
                                             onValueChange={(itemValue, itemIndex) =>
                                                 setMarks({ ...marks, grade: itemValue })
                                             }>
+                                            <Picker.Item label="Enter Grade" />
                                             <Picker.Item label="A" value="A" />
                                             <Picker.Item label="B+" value="B+" />
                                             <Picker.Item label="B" value="B" />
