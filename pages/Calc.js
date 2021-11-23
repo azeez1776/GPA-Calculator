@@ -124,8 +124,14 @@ export default function Calc({ navigation, route }) {
                                             onValueChange={(itemValue, itemIndex) =>
                                                 setGrade(itemValue)
                                             }>
-                                            <Picker.Item label="Java" value="java" />
-                                            <Picker.Item label="JavaScript" value="js" />
+                                            <Picker.Item label="A" value="A" />
+                                            <Picker.Item label="B+" value="B+" />
+                                            <Picker.Item label="B" value="B" />
+                                            <Picker.Item label="C" value="C" />
+                                            <Picker.Item label="D" value="D" />
+                                            <Picker.Item label="E" value="E" />
+                                            <Picker.Item label="F" value="F" />
+
                                         </Picker>
                                     </View>
 
