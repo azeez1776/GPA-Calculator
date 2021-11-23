@@ -209,8 +209,10 @@ const styles = StyleSheet.create({
         height: '40%',
         width: '100%',
         position: 'absolute',
-        bottom: 0
-
+        bottom: 0,
+        flex: 1,
+        alignContent: 'center',
+        paddingLeft: '40%'
     },
     modal: {
         flex: 1,
