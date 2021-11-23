@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Modal } from 'react-native';
 import GpaInput from '../components/GpaInput';
 import { Picker } from '@react-native-picker/picker';
+
 
 
 
@@ -14,8 +15,10 @@ export default function Calc({ navigation, route }) {
     });
 
     const [marksList, setMarksList] = useState([]);
+    const [gradeModal, setGradeModal] = useState(false);
 
     const [gpa, setGpa] = useState(null);
+    const [grade, setGrade] = useState();
     // const [gpaDecl, setGpaDecl] = useState('');
 
 
@@ -79,6 +82,8 @@ export default function Calc({ navigation, route }) {
 
     // }
 
+
+
     return (
         <View style={styles.container}>
             <View style={styles.main}>
@@ -91,14 +96,40 @@ export default function Calc({ navigation, route }) {
                                 value={marks.grade}
                                 onChangeText={text => setMarks({ ...marks, grade: text })}
                             />
-                            {/* <RNPickerSelect
-                                onValueChange={(value) => console.log(value)}
-                                items={[
-                                    { label: 'Football', value: 'football' },
-                                    { label: 'Baseball', value: 'baseball' },
-                                    { label: 'Hockey', value: 'hockey' },
-                                ]}
-                            /> */}
+                            <TouchableOpacity
+                                style={styles.gpaBtn}
+                                onPress={() => setGradeModal(true)}
+
+                            >
+                                <Text>
+                                    Enter Grade
+                                </Text>
+                            </TouchableOpacity>
+                            <Modal
+                                animationType="slide"
+                                transparent={true}
+                                visible={gradeModal}
+                                onRequestClose={() => {
+                                    Alert.alert('Modal has been closed.');
+                                    setGradeModal(!gradeModal);
+                                }}>
+                                <View
+                                    style={styles.modal}
+
+                                >
+                                    <Picker
+                                        selectedValue={grade}
+                                        onValueChange={(itemValue, itemIndex) =>
+                                            setGrade(itemValue)
+                                        }>
+                                        <Picker.Item label="Java" value="java" />
+                                        <Picker.Item label="JavaScript" value="js" />
+                                    </Picker>
+
+                                </View>
+
+                            </Modal>
+
                             <TextInput
                                 style={styles.creditarea}
                                 placeholder={" Enter Credit"}
@@ -170,6 +201,10 @@ export default function Calc({ navigation, route }) {
 }
 
 const styles = StyleSheet.create({
+    modal: {
+        flex: 1,
+        backgroundColor: 'purple'
+    },
     result: {
         flex: 1,
         justifyContent: 'center',
@@ -181,7 +216,8 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         marginBottom: 10,
         justifyContent: 'space-around',
-        width: '100%'
+        width: '100%',
+        flex: 1
     },
     partTwo: {
         display: 'flex',
