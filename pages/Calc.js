@@ -96,7 +96,7 @@ export default function Calc({ navigation, route }) {
 
                             >
                                 <Text style={{ textAlign: 'center', paddingTop: 10, fontSize: 24, color: 'grey' }}>
-                                    Enter Grade
+                                    {marks.grade}
                                 </Text>
                             </TouchableOpacity>
                             <Modal
