@@ -117,14 +117,16 @@ export default function Calc({ navigation, route }) {
                                     style={styles.modal}
 
                                 >
-                                    <Picker
-                                        selectedValue={grade}
-                                        onValueChange={(itemValue, itemIndex) =>
-                                            setGrade(itemValue)
-                                        }>
-                                        <Picker.Item label="Java" value="java" />
-                                        <Picker.Item label="JavaScript" value="js" />
-                                    </Picker>
+                                    <View style={styles.picker}>
+                                        <Picker
+                                            selectedValue={grade}
+                                            onValueChange={(itemValue, itemIndex) =>
+                                                setGrade(itemValue)
+                                            }>
+                                            <Picker.Item label="Java" value="java" />
+                                            <Picker.Item label="JavaScript" value="js" />
+                                        </Picker>
+                                    </View>
 
                                 </View>
 
@@ -201,6 +203,14 @@ export default function Calc({ navigation, route }) {
 }
 
 const styles = StyleSheet.create({
+    picker: {
+        backgroundColor: 'white',
+        height: '40%',
+        width: '100%',
+        position: 'absolute',
+        bottom: 0
+
+    },
     modal: {
         flex: 1,
         backgroundColor: 'purple'
