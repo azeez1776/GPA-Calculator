@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Modal } from 'react-native';
 import GpaInput from '../components/GpaInput';
-import RNPickerSelect from 'react-native-picker-select';
+import { Picker } from '@react-native-picker/picker';
+
 
 
 
@@ -14,8 +15,10 @@ export default function Calc({ navigation, route }) {
     });
 
     const [marksList, setMarksList] = useState([]);
+    const [gradeModal, setGradeModal] = useState(false);
 
     const [gpa, setGpa] = useState(null);
+    const [grade, setGrade] = useState();
     // const [gpaDecl, setGpaDecl] = useState('');
 
 
@@ -79,26 +82,59 @@ export default function Calc({ navigation, route }) {
 
     // }
 
+
+
     return (
         <View style={styles.container}>
             <View style={styles.main}>
                 <View style={gpa ? { display: 'none' } : { flex: 1 }}>
                     <View style={styles.operations}>
                         <View style={styles.partOne}>
-                            <TextInput
+                            <TouchableOpacity
                                 style={styles.gradearea}
-                                placeholder={" Enter Grade"}
-                                value={marks.grade}
-                                onChangeText={text => setMarks({ ...marks, grade: text })}
-                            />
-                            {/* <RNPickerSelect
-                                onValueChange={(value) => console.log(value)}
-                                items={[
-                                    { label: 'Football', value: 'football' },
-                                    { label: 'Baseball', value: 'baseball' },
-                                    { label: 'Hockey', value: 'hockey' },
-                                ]}
-                            /> */}
+                                onPress={() => setGradeModal(true)}
+
+                            >
+                                <Text style={{ textAlign: 'center', paddingTop: 10, fontSize: 24, color: 'grey' }}>
+                                    {marks.grade}
+                                </Text>
+                            </TouchableOpacity>
+                            <Modal
+                                animationType="slide"
+                                transparent={true}
+                                visible={gradeModal}
+                                onRequestClose={() => {
+                                    setGradeModal(!gradeModal);
+                                }}>
+                                <View
+                                    style={styles.modal}
+
+                                >
+                                    <View style={styles.picker}>
+                                        <Picker
+                                            style={{ height: 50, width: '100%' }}
+                                            selectedValue={marks.grade}
+                                            onValueChange={(itemValue, itemIndex) => {
+                                                setMarks({ ...marks, grade: itemValue })
+                                                setGradeModal(!gradeModal)
+                                            }
+                                            }>
+                                            <Picker.Item label="Enter Grade" value="" />
+                                            <Picker.Item label="A" value="A" />
+                                            <Picker.Item label="B+" value="B+" />
+                                            <Picker.Item label="B" value="B" />
+                                            <Picker.Item label="C" value="C" />
+                                            <Picker.Item label="D" value="D" />
+                                            <Picker.Item label="E" value="E" />
+                                            <Picker.Item label="F" value="F" />
+
+                                        </Picker>
+                                    </View>
+
+                                </View>
+
+                            </Modal>
+
                             <TextInput
                                 style={styles.creditarea}
                                 placeholder={" Enter Credit"}
@@ -170,6 +206,19 @@ export default function Calc({ navigation, route }) {
 }
 
 const styles = StyleSheet.create({
+    picker: {
+        backgroundColor: '#eff6ee',
+        height: '40%',
+        width: '100%',
+        position: 'absolute',
+        bottom: 0,
+        flex: 1,
+        alignContent: 'center',
+        paddingLeft: '40%'
+    },
+    modal: {
+        flex: 1,
+    },
     result: {
         flex: 1,
         justifyContent: 'center',
@@ -181,7 +230,8 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         marginBottom: 10,
         justifyContent: 'space-around',
-        width: '100%'
+        width: '100%',
+        flex: 1
     },
     partTwo: {
         display: 'flex',
