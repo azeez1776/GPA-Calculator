@@ -119,6 +119,7 @@ export default function Calc({ navigation, route }) {
                                 >
                                     <View style={styles.picker}>
                                         <Picker
+                                            style={{ height: 50, width: '100%' }}
                                             selectedValue={grade}
                                             onValueChange={(itemValue, itemIndex) =>
                                                 setGrade(itemValue)
@@ -204,7 +205,7 @@ export default function Calc({ navigation, route }) {
 
 const styles = StyleSheet.create({
     picker: {
-        backgroundColor: 'white',
+        backgroundColor: '#eff6ee',
         height: '40%',
         width: '100%',
         position: 'absolute',
@@ -213,7 +214,6 @@ const styles = StyleSheet.create({
     },
     modal: {
         flex: 1,
-        backgroundColor: 'purple'
     },
     result: {
         flex: 1,
