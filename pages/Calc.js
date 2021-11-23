@@ -95,7 +95,7 @@ export default function Calc({ navigation, route }) {
                                 onPress={() => setGradeModal(true)}
 
                             >
-                                <Text>
+                                <Text style={{ textAlign: 'center', paddingTop: 10, fontSize: 24, color: 'grey' }}>
                                     Enter Grade
                                 </Text>
                             </TouchableOpacity>
