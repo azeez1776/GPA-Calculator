@@ -6,8 +6,10 @@ const Detail = () => {
     return (
         <View style={styles.container}>
             <View style={styles.menu}>
-                <TouchableOpacity>
-                    <Text>GPA Kaluu</Text>
+                <TouchableOpacity
+                    style={styles.gpaKaluubtn}
+                >
+                    <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>GPA Kaluu</Text>
                 </TouchableOpacity>
                 <TouchableOpacity>
                     <Text>About</Text>
@@ -30,5 +32,11 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    gpaKaluubtn: {
+        backgroundColor: '#03071e',
+        width: 220,
+        height: 40,
+        borderRadius: 10
     }
 })
