@@ -16,8 +16,10 @@ const Detail = () => {
                 >
                     <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>About</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
-                    <Text>Setting</Text>
+                <TouchableOpacity
+                    style={styles.settingbtn}
+                >
+                    <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>Setting</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -43,6 +45,12 @@ const styles = StyleSheet.create({
     },
     aboutbtn: {
         backgroundColor: '#370617',
+        width: 220,
+        height: 40,
+        borderRadius: 10
+    },
+    settingbtn: {
+        backgroundColor: '#6a040f',
         width: 220,
         height: 40,
         borderRadius: 10
