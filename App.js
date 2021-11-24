@@ -23,7 +23,7 @@ export default function App() {
         }}
       >
         <Stack.Screen
-          name='Home'
+          name='Kaluu'
           component={Calc}
           options={{
             title: 'Kaluu.',
@@ -34,10 +34,10 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name='Detail'
+          name='Home'
           component={Detail}
           options={{
-            title: 'GPA Kaluu',
+            title: 'Kaluu.',
             headerTitleStyle: {
               fontWeight: 'bold',
               fontSize: 30
