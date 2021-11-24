@@ -26,7 +26,7 @@ export default function App() {
           name='Home'
           component={Calc}
           options={{
-            title: 'GPA Kaluu',
+            title: 'Kaluu.',
             headerTitleStyle: {
               fontWeight: 'bold',
               fontSize: 30
