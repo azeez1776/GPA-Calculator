@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
-const Detail = () => {
+const Detail = ({ navigation, route }) => {
     return (
         <View style={styles.container}>
             <View style={styles.menu}>
@@ -11,6 +11,9 @@ const Detail = () => {
                 </View>
                 <TouchableOpacity
                     style={styles.gpaKaluubtn}
+                    onPress={() => {
+                        navigation.navigate('Kaluu');
+                    }}
                 >
                     <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>GPA Kaluu</Text>
                 </TouchableOpacity>
