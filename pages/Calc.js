@@ -224,6 +224,15 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
+    operations: {
+        flex: 1,
+        marginTop: 15,
+        zIndex: 2,
+        backgroundColor: '#ffffff',
+        justifyContent: 'center',
+        padding: 0,
+        height: '10%'
+    },
     partOne: {
         display: 'flex',
         flexDirection: 'row',
@@ -231,7 +240,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         justifyContent: 'space-around',
         width: '100%',
-        flex: 1
+
     },
     partTwo: {
         display: 'flex',
@@ -358,13 +367,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold'
 
-    },
-    operations: {
-        flex: 1,
-        marginTop: 15,
-        zIndex: 2,
-        backgroundColor: '#ffffff',
-        justifyContent: 'center'
     },
     flow: {
         margin: 5
