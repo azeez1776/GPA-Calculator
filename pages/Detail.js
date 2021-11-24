@@ -41,18 +41,21 @@ const styles = StyleSheet.create({
         backgroundColor: '#03071e',
         width: 220,
         height: 40,
-        borderRadius: 10
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+
     },
     aboutbtn: {
         backgroundColor: '#370617',
         width: 220,
         height: 40,
-        borderRadius: 10
     },
     settingbtn: {
         backgroundColor: '#6a040f',
         width: 220,
         height: 40,
-        borderRadius: 10
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+
     }
 })
