@@ -22,7 +22,8 @@
       "supportsTablet": true
     },
     "android": {
-      "package":"com.azeez.GPAKALU",
+      "package":"com.azeez.kaluu",
+      "versionCode":1,
       "permissions":[ "WRITE_EXTERNAL_STORAGE" ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
