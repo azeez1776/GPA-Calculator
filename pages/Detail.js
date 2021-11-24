@@ -11,8 +11,10 @@ const Detail = () => {
                 >
                     <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>GPA Kaluu</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
-                    <Text>About</Text>
+                <TouchableOpacity
+                    style={styles.aboutbtn}
+                >
+                    <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>About</Text>
                 </TouchableOpacity>
                 <TouchableOpacity>
                     <Text>Setting</Text>
@@ -35,6 +37,12 @@ const styles = StyleSheet.create({
     },
     gpaKaluubtn: {
         backgroundColor: '#03071e',
+        width: 220,
+        height: 40,
+        borderRadius: 10
+    },
+    aboutbtn: {
+        backgroundColor: '#370617',
         width: 220,
         height: 40,
         borderRadius: 10
