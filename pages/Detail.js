@@ -6,6 +6,9 @@ const Detail = () => {
     return (
         <View style={styles.container}>
             <View style={styles.menu}>
+                <View style={styles.menuList}>
+                    <Text style={{ fontSize: 30, fontWeight: 'bold' }}>Menu</Text>
+                </View>
                 <TouchableOpacity
                     style={styles.gpaKaluubtn}
                 >
