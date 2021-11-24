@@ -90,7 +90,7 @@ export default function Calc({ navigation, route }) {
                 <View style={gpa ? { display: 'none' } : { flex: 1 }}>
                     <View style={styles.operations}>
                         <View style={{ alignItems: 'center', marginBottom: 10 }}>
-                            <Text>Calculate Your GPA</Text>
+                            <Text style={{ fontSize: 25, fontWeight: 'bold' }}>Calculate Your GPA</Text>
                         </View>
                         <View style={styles.partOne}>
                             <TouchableOpacity
