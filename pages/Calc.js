@@ -89,6 +89,9 @@ export default function Calc({ navigation, route }) {
             <View style={styles.main}>
                 <View style={gpa ? { display: 'none' } : { flex: 1 }}>
                     <View style={styles.operations}>
+                        <View>
+                            <Text>Calculate Your GPA</Text>
+                        </View>
                         <View style={styles.partOne}>
                             <TouchableOpacity
                                 style={styles.gradearea}
