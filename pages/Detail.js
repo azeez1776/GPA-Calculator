@@ -7,7 +7,13 @@ const Detail = () => {
         <View style={styles.container}>
             <View style={styles.menu}>
                 <TouchableOpacity>
-
+                    <Text>GPA Kaluu</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text>About</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text>Setting</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -16,4 +22,13 @@ const Detail = () => {
 
 export default Detail
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        flex: 1
+    },
+    menu: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
+})
