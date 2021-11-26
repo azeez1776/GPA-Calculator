@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Alert, Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Modal } from 'react-native';
 import GpaInput from '../components/GpaInput';
 import { Picker } from '@react-native-picker/picker';
+import uuid from 'react-uuid';
 
 
 
