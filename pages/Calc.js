@@ -68,24 +68,24 @@ export default function Calc({ navigation, route }) {
         setGpa(Math.round((totalGradeCredit / totalCredit) * 10) / 10);
     }
 
-    // const gpaClass = (value) => {
-    //     if (4.3 >= value >= 3.5) {
-    //         return 'Upper Second Class GPA'
-    //     }
-    //     else if (3.4 >= value >= 2.7) {
-    //         return 'Lower Second Class GPA'
-    //     }
-    //     else if (2.6 >= value >= 2.0) {
-    //         return 'Pass'
-    //     }
-    //     else if (value < 2.0) {
-    //         return 'This is not the end'
-    //     }
-    //     else {
-    //         return 'First Class GPA'
-    //     }
+    const gpaClass = (value) => {
+        if (4.3 >= value >= 3.5) {
+            return 'Upper Second Class GPA'
+        }
+        else if (3.4 >= value >= 2.7) {
+            return 'Lower Second Class GPA'
+        }
+        else if (2.6 >= value >= 2.0) {
+            return 'Pass'
+        }
+        else if (value < 2.0) {
+            return 'This is not the end'
+        }
+        else {
+            return 'First Class GPA'
+        }
 
-    // }
+    }
 
 
 
@@ -178,7 +178,7 @@ export default function Calc({ navigation, route }) {
                     <View style={styles.result}>
 
                         <Text style={styles.gpa}>{gpa}</Text>
-                        {/* <Text>{gpaDecl}</Text> */}
+                        <Text>{gpaClass(gpa)}</Text>
                         <TouchableOpacity
                             onPress={handleBack}
                         >
