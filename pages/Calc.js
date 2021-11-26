@@ -69,20 +69,20 @@ export default function Calc({ navigation, route }) {
     }
 
     const gpaClass = (value) => {
-        if (4.3 >= value >= 3.5) {
-            return 'Upper Second Class GPA'
+        if (value >= 4.4) {
+            return 'First Class'
         }
-        else if (3.4 >= value >= 2.7) {
-            return 'Lower Second Class GPA'
+        else if (value >= 3.5) {
+            return 'Upper Second Class'
         }
-        else if (2.6 >= value >= 2.0) {
-            return 'Pass'
+        else if (value >= 2.7) {
+            return 'Lower Second Class'
         }
-        else if (value < 2.0) {
-            return 'This is not the end'
+        else if (value >= 2.0) {
+            return 'Pass '
         }
         else {
-            return 'First Class GPA'
+            return 'Consult your Lecturers, it isn\'t the end'
         }
 
     }
