@@ -178,7 +178,7 @@ export default function Calc({ navigation, route }) {
                     <View style={styles.result}>
 
                         <Text style={styles.gpa}>{gpa}</Text>
-                        <Text>{gpaClass(gpa)}</Text>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>{gpaClass(gpa)}</Text>
                         <TouchableOpacity
                             onPress={handleBack}
                         >
