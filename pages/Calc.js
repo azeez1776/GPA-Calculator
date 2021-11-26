@@ -24,11 +24,16 @@ export default function Calc({ navigation, route }) {
 
     const handlePress = () => {
         // Keyboard.dismiss();
-        setMarksList([...marksList, marks]);
-        setMarks({
-            grade: '',
-            credit: ''
-        });
+        if (marks.grade == '' || marks.credit == '') {
+            return;
+        }
+        else {
+            setMarksList([...marksList, marks]);
+            setMarks({
+                grade: '',
+                credit: ''
+            });
+        }
     }
 
     const handleRemove = (index) => {
@@ -141,9 +146,10 @@ export default function Calc({ navigation, route }) {
                             <TextInput
                                 style={styles.creditarea}
                                 placeholder={" Enter Credit"}
-                                value={marks.credit}
+                                value={marks.credit ? marks.credit : null}
                                 keyboardType="numeric"
                                 onChangeText={text => setMarks({ ...marks, credit: text })}
+
                             />
                         </View>
                         <View style={styles.partTwo}>
@@ -187,22 +193,20 @@ export default function Calc({ navigation, route }) {
                 ) : (
                     <ScrollView style={{ height: 50, zIndex: 1 }}>
                         {marksList.map((value, index) => {
-                            if (value) {
-                                return (
-                                    <TouchableOpacity
-                                        style={styles.flow}
-                                        key={index}
-                                        onPress={handleRemove}
-                                    >
-                                        <GpaInput style={styles.gpaIn} grade={value.grade} credit={value.credit} />
-                                    </TouchableOpacity>
 
-                                )
-                            }
-                            else {
-                                return;
-                            }
-                        })}
+                            return (
+                                <TouchableOpacity
+                                    style={styles.flow}
+                                    key={index}
+                                    onPress={handleRemove}
+                                >
+                                    <GpaInput style={styles.gpaIn} grade={value.grade} credit={value.credit} />
+                                </TouchableOpacity>
+
+                            )
+                        }
+
+                        )}
                     </ScrollView>
                 )
                 }
