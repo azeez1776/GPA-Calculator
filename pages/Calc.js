@@ -198,7 +198,7 @@ export default function Calc({ navigation, route }) {
                             return (
                                 <TouchableOpacity
                                     style={styles.flow}
-                                    key={index}
+                                    key={uuid()}
                                     onPress={handleRemove}
                                 >
                                     <GpaInput style={styles.gpaIn} grade={value.grade} credit={value.credit} />
