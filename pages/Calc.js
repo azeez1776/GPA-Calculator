@@ -187,7 +187,7 @@ export default function Calc({ navigation, route }) {
                 ) : (
                     <ScrollView style={{ height: 50, zIndex: 1 }}>
                         {marksList.map((value, index) => {
-                            if (value.gpa && value.credit) {
+                            if (value) {
                                 return (
                                     <TouchableOpacity
                                         style={styles.flow}
