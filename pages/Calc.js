@@ -187,16 +187,21 @@ export default function Calc({ navigation, route }) {
                 ) : (
                     <ScrollView style={{ height: 50, zIndex: 1 }}>
                         {marksList.map((value, index) => {
-                            return (
-                                <TouchableOpacity
-                                    style={styles.flow}
-                                    key={index}
-                                    onPress={handleRemove}
-                                >
-                                    <GpaInput style={styles.gpaIn} grade={value.grade} credit={value.credit} />
-                                </TouchableOpacity>
+                            if (value.gpa && value.credit) {
+                                return (
+                                    <TouchableOpacity
+                                        style={styles.flow}
+                                        key={index}
+                                        onPress={handleRemove}
+                                    >
+                                        <GpaInput style={styles.gpaIn} grade={value.grade} credit={value.credit} />
+                                    </TouchableOpacity>
 
-                            )
+                                )
+                            }
+                            else {
+                                return;
+                            }
                         })}
                     </ScrollView>
                 )
