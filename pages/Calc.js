@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Alert, Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Modal } from 'react-native';
 import GpaInput from '../components/GpaInput';
 import { Picker } from '@react-native-picker/picker';
-import uuid from 'react-uuid';
 
 
 
@@ -198,8 +197,8 @@ export default function Calc({ navigation, route }) {
                             return (
                                 <TouchableOpacity
                                     style={styles.flow}
-                                    key={uuid()}
-                                    onPress={handleRemove}
+                                    key={index}
+                                    onPress={() => handleRemove(index)}
                                 >
                                     <GpaInput style={styles.gpaIn} grade={value.grade} credit={value.credit} />
                                 </TouchableOpacity>
