@@ -5,7 +5,7 @@ const Contacts = () => {
     return (
         <SafeAreaView style={styles.container}>
             <Text
-                style={{}}
+                style={{ fontSize: 23, paddingLeft: 8 }}
                 onPress={() => Linking.openURL('wa.link/e13qow')}
             >Whatsapp: +255621485339</Text>
         </SafeAreaView>
