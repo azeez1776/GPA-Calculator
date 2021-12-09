@@ -27,6 +27,15 @@ export default About
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // justifyContent:'space-between'
+        // justifyContent: ''
+    },
+    partOne: {
+        paddingTop: 12
+
+    },
+    partTwo: {
+        paddingTop: 12
+
     }
+
 })
