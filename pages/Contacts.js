@@ -5,7 +5,7 @@ import { Icon } from 'react-native-elements'
 const Contacts = () => {
     return (
         <SafeAreaView style={styles.container}>
-            <View style={{ flexDirection: 'row', paddingLeft: 12, paddingTop: 12 }}>
+            <View style={{ flexDirection: 'row', paddingLeft: 12 }}>
                 <Icon
                     name="whatsapp"
                     type="font-awesome"
@@ -33,6 +33,7 @@ export default Contacts
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        justifyContent: 'center'
     }
 })
