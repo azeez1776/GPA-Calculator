@@ -8,6 +8,9 @@ const About = () => {
                 <Text style={{ fontSize: 27, fontWeight: 'bold', paddingLeft: 12 }}>About</Text>
                 <Text style={{ fontSize: 23, paddingLeft: 8 }}>This is an app that calculates GPA based on the grades and credit entered by the user. It is a very simple to use GPA calculator</Text>
             </View>
+            <View style={styles.partTwo}>
+
+            </View>
 
         </SafeAreaView>
     )
