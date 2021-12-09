@@ -9,6 +9,7 @@ const Contacts = () => {
                 <Icon
                     name="whatsapp"
                     type="font-awesome"
+                    size={35}
                 />
                 <Text
                     style={{ fontSize: 23, paddingLeft: 8 }}
@@ -18,6 +19,7 @@ const Contacts = () => {
                 <Icon
                     name="github"
                     type="font-awesome"
+                    size={35}
                 />
                 <Text
                     style={{ fontSize: 23, paddingLeft: 8 }}
