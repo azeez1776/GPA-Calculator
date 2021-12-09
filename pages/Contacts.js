@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, SafeAreaView, Linking } from 'react-native'
+import { Icon } from 'react-native-elements'
 
 const Contacts = () => {
     return (
