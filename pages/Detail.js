@@ -57,6 +57,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#370617',
         width: 220,
         height: 40,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
     },
     settingbtn: {
         backgroundColor: '#6a040f',
