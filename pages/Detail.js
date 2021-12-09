@@ -23,12 +23,12 @@ const Detail = ({ navigation, route }) => {
                 >
                     <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>About</Text>
                 </TouchableOpacity>
-                <TouchableOpacity
+                {/* <TouchableOpacity
                     style={styles.settingbtn}
 
                 >
                     <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>Setting</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
         </View>
     )
