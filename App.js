@@ -51,7 +51,7 @@ export default function App() {
           name='About'
           component={About}
           options={{
-            title: 'Kaluu.',
+            title: 'About',
             headerTitleStyle: {
               fontWeight: 'bold',
               fontSize: 30
@@ -62,7 +62,7 @@ export default function App() {
           name='Contacts'
           component={Contacts}
           options={{
-            title: 'Kaluu.',
+            title: 'Contacts',
             headerTitleStyle: {
               fontWeight: 'bold',
               fontSize: 30
