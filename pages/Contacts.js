@@ -1,14 +1,21 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Linking } from 'react-native'
 
 const Contacts = () => {
     return (
-        <SafeAreaView>
-            <Text>Contacts</Text>
+        <SafeAreaView style={styles.container}>
+            <Text
+                style={{}}
+                onPress={() => Linking.openURL('wa.link/e13qow')}
+            >Whatsapp: +255621485339</Text>
         </SafeAreaView>
     )
 }
 
 export default Contacts
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        flex: 1
+    }
+})
