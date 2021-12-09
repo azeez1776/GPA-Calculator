@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
 
 const About = () => {
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.container}>
             <Text>About</Text>
         </SafeAreaView>
     )
@@ -11,4 +11,8 @@ const About = () => {
 
 export default About
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        flex: 1
+    }
+})
