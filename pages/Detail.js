@@ -20,7 +20,7 @@ const Detail = ({ navigation, route }) => {
                 <TouchableOpacity
                     style={styles.aboutbtn}
                     onPress={() => {
-                        navigation.navigate()
+                        navigation.navigate('About')
                     }}
 
                 >
