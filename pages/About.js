@@ -11,6 +11,11 @@ const About = () => {
             <View style={styles.partTwo}>
                 <Text style={{ fontSize: 27, fontWeight: 'bold', paddingLeft: 12 }}>Grading Scale</Text>
                 <Text style={{ fontSize: 23, paddingLeft: 8 }}>A = 5</Text>
+                <Text style={{ fontSize: 23, paddingLeft: 8 }}>B+ = 4</Text>
+                <Text style={{ fontSize: 23, paddingLeft: 8 }}>B = 3</Text>
+                <Text style={{ fontSize: 23, paddingLeft: 8 }}>C = 2</Text>
+                <Text style={{ fontSize: 23, paddingLeft: 8 }}>D = 1</Text>
+                <Text style={{ fontSize: 23, paddingLeft: 8 }}>F = 0</Text>
             </View>
 
         </SafeAreaView>
