@@ -12,8 +12,16 @@ const Contacts = () => {
                 />
                 <Text
                     style={{ fontSize: 23, paddingLeft: 8 }}
-                    onPress={() => Linking.openURL('wa.link/e13qow')}
                 >Whatsapp: +255621485339</Text>
+            </View>
+            <View style={{ flexDirection: 'row', paddingLeft: 12, paddingTop: 12 }}>
+                <Icon
+                    name="github"
+                    type="font-awesome"
+                />
+                <Text
+                    style={{ fontSize: 23, paddingLeft: 8 }}
+                >Github: Samatar Abdi</Text>
             </View>
         </SafeAreaView>
     )
