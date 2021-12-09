@@ -132,9 +132,9 @@ export default function Calc({ navigation, route }) {
                                             <Picker.Item label="B+" value="B+" />
                                             <Picker.Item label="B" value="B" />
                                             <Picker.Item label="C" value="C" />
-                                            <Picker.Item label="D" value="D" />
+                                            {/* <Picker.Item label="D" value="D" />
                                             <Picker.Item label="E" value="E" />
-                                            <Picker.Item label="F" value="F" />
+                                            <Picker.Item label="F" value="F" /> */}
 
                                         </Picker>
                                     </View>
