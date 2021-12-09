@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Calc from './pages/Calc';
 import Detail from './pages/Detail';
+import About from './pages/About';
 
 
 export default function App() {
@@ -36,6 +37,17 @@ export default function App() {
         <Stack.Screen
           name='Home'
           component={Detail}
+          options={{
+            title: 'Kaluu.',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30
+            }
+          }}
+        />
+        <Stack.Screen
+          name='About'
+          component={About}
           options={{
             title: 'Kaluu.',
             headerTitleStyle: {
