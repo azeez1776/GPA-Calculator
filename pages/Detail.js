@@ -28,12 +28,12 @@ const Detail = ({ navigation, route }) => {
                 >
                     <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>About</Text>
                 </TouchableOpacity>
-                {/* <TouchableOpacity
+                <TouchableOpacity
                     style={styles.settingbtn}
 
                 >
-                    <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>Setting</Text>
-                </TouchableOpacity> */}
+                    <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>Contacts</Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
@@ -62,8 +62,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#370617',
         width: 220,
         height: 40,
-        borderBottomLeftRadius: 10,
-        borderBottomRightRadius: 10,
+
     },
     settingbtn: {
         backgroundColor: '#6a040f',
