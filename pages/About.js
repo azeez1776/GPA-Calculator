@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native'
 const About = () => {
     return (
         <View>
-            <Text></Text>
+            <Text>About</Text>
         </View>
     )
 }

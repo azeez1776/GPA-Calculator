@@ -19,6 +19,9 @@ const Detail = ({ navigation, route }) => {
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.aboutbtn}
+                    onPress={() => {
+                        navigation.navigate()
+                    }}
 
                 >
                     <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>About</Text>
