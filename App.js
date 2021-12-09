@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import Calc from './pages/Calc';
 import Detail from './pages/Detail';
 import About from './pages/About';
@@ -20,7 +20,8 @@ export default function App() {
           headerTintColor: '#ffffff',
           headerStyle: {
             backgroundColor: '#03071e'
-          }
+          },
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
         }}
       >
         <Stack.Screen
