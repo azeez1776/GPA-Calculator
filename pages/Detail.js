@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -5,6 +6,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 const Detail = ({ navigation, route }) => {
     return (
         <View style={styles.container}>
+            <StatusBar backgroundColor='black' style='light' />
             <View style={styles.menu}>
                 <View style={styles.menuList}>
                     <Text style={{ fontSize: 30, fontWeight: 'bold' }}>Menu</Text>
