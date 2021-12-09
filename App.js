@@ -6,6 +6,7 @@ import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/
 import Calc from './pages/Calc';
 import Detail from './pages/Detail';
 import About from './pages/About';
+import Contacts from './pages/Contacts';
 
 
 export default function App() {
@@ -57,7 +58,17 @@ export default function App() {
             }
           }}
         />
-
+        <Stack.Screen
+          name='Contacts'
+          component={Contacts}
+          options={{
+            title: 'Kaluu.',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30
+            }
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
