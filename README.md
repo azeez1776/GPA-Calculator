@@ -1,7 +1,7 @@
 # GPA-Calculator
 This is a GPA calculator made with React native. This calculator simplifies the tedious process of multiplying, adding and including brackets when calculating the GPA, so basically what is done by the user is that, the user inputs his/her grades and credits, and presses the add button every time after inputing the grade and credit. After completing inputing the grades and credit, the user presses the compute button and the GPA and the GPA class are computed.  
 <h2>This is the splash screen.</h2>
-![photo1640269894 (1)](https://user-images.githubusercontent.com/39125180/147261149-4fe633c7-aebc-41bf-87cd-05b20bbb67e2.jpeg)
+<img src="https://user-images.githubusercontent.com/39125180/147261149-4fe633c7-aebc-41bf-87cd-05b20bbb67e2.jpeg" alt="image"/>
 
 <h2>The Menu</h2>
 <img src="https://user-images.githubusercontent.com/39125180/147261225-56d9d1b1-ad5e-4986-8d97-0e6aebbd7b2d.jpeg" alt="image"/>
