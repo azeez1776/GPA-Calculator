@@ -57,7 +57,7 @@ export default function Calc({ navigation, route }) {
         };
         // return console.log(sum);
         for (let j = 0; j < marksList.length; j++) {
-            if (marksList[j].grade === 'A') marksList[j].grade = 5;
+            if (marksList[j].grade === 'A') marksList[j].grade = 4;
             else if (marksList[j].grade === 'B+') marksList[j].grade = 4;
             else if (marksList[j].grade === 'B') marksList[j].grade = 3;
             else if (marksList[j].grade === 'C') marksList[j].grade = 2;
