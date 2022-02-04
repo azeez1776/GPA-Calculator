@@ -124,7 +124,6 @@ export default function Calc({ navigation, route }) {
                                             }>
                                             <Picker.Item label="Enter Grade" value="" />
                                             <Picker.Item label="A" value="A" />
-                                            <Picker.Item label="B+" value="B+" />
                                             <Picker.Item label="B" value="B" />
                                             <Picker.Item label="C" value="C" />
                                             {/* <Picker.Item label="D" value="D" />
