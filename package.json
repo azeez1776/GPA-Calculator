@@ -19,6 +19,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
     "react-native-elements": "^3.4.2",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-onboarding-swiper": "^1.2.0",
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.4.0",
     "react-native-web": "~0.13.12"
