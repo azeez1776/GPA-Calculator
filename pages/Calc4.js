@@ -58,10 +58,8 @@ export default function Calc({ navigation, route }) {
         // return console.log(sum);
         for (let j = 0; j < marksList.length; j++) {
             if (marksList[j].grade === 'A') marksList[j].grade = 4;
-            else if (marksList[j].grade === 'B+') marksList[j].grade = 4;
             else if (marksList[j].grade === 'B') marksList[j].grade = 3;
             else if (marksList[j].grade === 'C') marksList[j].grade = 2;
-            // else if (marksList[j].grade === 'D') marksList[j].grade = 1;
             else marksList[j].grade = 0;
             totalGradeCredit += marksList[j].grade * marksList[j].credit;
         }
