@@ -67,17 +67,14 @@ export default function Calc({ navigation, route }) {
     }
 
     const gpaClass = (value) => {
-        if (value >= 4.4) {
+        if (value >= 3.5) {
             return 'First Class'
         }
-        else if (value >= 3.5) {
-            return 'Upper Second Class'
-        }
-        else if (value >= 2.7) {
-            return 'Lower Second Class'
+        else if (value >= 3.0) {
+            return 'Second Class'
         }
         else if (value >= 2.0) {
-            return 'Pass '
+            return 'Pass'
         }
         else {
             return 'Consult your Lecturers, it isn\'t the end'
