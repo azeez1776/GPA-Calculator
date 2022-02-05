@@ -25,7 +25,9 @@ export default function Calc({ navigation, route }) {
     const handlePress = () => {
         // Keyboard.dismiss();
         if (marks.grade == '' || marks.credit == '') {
-            return;
+            return Alert.alert('', 'Add after every grade and credit inputted for every course, then finally compute for the GPA', [
+                { text: 'OK', onPress: () => console.log('OK Pressed') },
+            ]);
         }
         else {
             setMarksList([...marksList, marks]);
