@@ -3,6 +3,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
+//CHOOSE 5.0 OR 4.0 GPA
 const Detail = ({ navigation, route }) => {
     return (
         <View style={styles.container}>
