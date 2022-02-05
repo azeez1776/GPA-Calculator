@@ -1,15 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
-import Onboarding from 'react-native-onboarding-swiper';
+// import { StyleSheet, Text, View } from 'react-native';
+// import React from 'react';
+// import Onboarding from 'react-native-onboarding-swiper';
 
-const OnBoarding = () => {
-    return (
-        <View>
+// const OnBoarding = () => {
+//     return (
+//         <View>
+// <Onboarding
+// pages={[
 
-        </View>
-    );
-};
+// ]}
+// />
+//         </View>
+//     );
+// };
 
-export default OnBoarding;
+// export default OnBoarding;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});
