@@ -27,7 +27,7 @@ export default function App() {
         }}
       >
         <Stack.Screen
-          name='Kaluu'
+          name='Kaluu5'
           component={Calc5}
           options={{
             title: 'Kaluu.',
@@ -38,7 +38,7 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name='Kaluu'
+          name='Kaluu4'
           component={Calc4}
           options={{
             title: 'Kaluu.',
