@@ -15,7 +15,7 @@ const Detail = ({ navigation, route }) => {
                 <TouchableOpacity
                     style={styles.gpaKaluubtn}
                     onPress={() => {
-                        navigation.navigate('5.0 Calculator');
+                        navigation.navigate('Kaluu5');
                     }}
                 >
                     <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>GPA Kaluu</Text>
@@ -23,7 +23,7 @@ const Detail = ({ navigation, route }) => {
                 <TouchableOpacity
                     style={styles.aboutbtn}
                     onPress={() => {
-                        navigation.navigate('4.0 Calculator')
+                        navigation.navigate('Kaluu4')
                     }}
 
                 >
