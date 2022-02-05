@@ -14,7 +14,7 @@ const Detail = ({ navigation, route }) => {
                 <TouchableOpacity
                     style={styles.gpaKaluubtn}
                     onPress={() => {
-                        navigation.navigate('Kaluu');
+                        navigation.navigate('Choice');
                     }}
                 >
                     <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>GPA Kaluu</Text>
