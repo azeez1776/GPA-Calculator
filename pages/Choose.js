@@ -18,7 +18,7 @@ const Detail = ({ navigation, route }) => {
                         navigation.navigate('Kaluu5');
                     }}
                 >
-                    <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>GPA Kaluu</Text>
+                    <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>GPA 5.0/5.0</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.aboutbtn}
@@ -27,7 +27,7 @@ const Detail = ({ navigation, route }) => {
                     }}
 
                 >
-                    <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>About</Text>
+                    <Text style={{ color: 'white', textAlign: 'center', paddingTop: 7, fontSize: 20 }}>GPA 4.0/4.0</Text>
                 </TouchableOpacity>
             </View>
         </View>
