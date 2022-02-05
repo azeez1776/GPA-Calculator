@@ -27,7 +27,7 @@ export default function App() {
       >
         <Stack.Screen
           name='Kaluu'
-          component={Calc}
+          component={Calc5}
           options={{
             title: 'Kaluu.',
             headerTitleStyle: {
