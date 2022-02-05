@@ -8,6 +8,7 @@ import Calc4 from './pages/Calc4';
 import Detail from './pages/Detail';
 import About from './pages/About';
 import Contacts from './pages/Contacts';
+import Choose from './pages/Choose';
 
 
 export default function App() {
@@ -40,6 +41,17 @@ export default function App() {
         <Stack.Screen
           name='Kaluu4'
           component={Calc4}
+          options={{
+            title: 'Kaluu.',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30
+            }
+          }}
+        />
+        <Stack.Screen
+          name='Choice'
+          component={Choose}
           options={{
             title: 'Kaluu.',
             headerTitleStyle: {
