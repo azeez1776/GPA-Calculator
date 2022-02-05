@@ -37,6 +37,17 @@ export default function App() {
           }}
         />
         <Stack.Screen
+          name='Kaluu'
+          component={Calc4}
+          options={{
+            title: 'Kaluu.',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30
+            }
+          }}
+        />
+        <Stack.Screen
           name='Home'
           component={Detail}
           options={{
