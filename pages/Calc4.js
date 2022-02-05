@@ -49,21 +49,28 @@ export default function Calc({ navigation, route }) {
     }
 
     const handleCompute = () => {
-        Keyboard.dismiss();
-        let totalCredit = 0;
-        let totalGradeCredit = 0;
-        for (let i = 0; i < marksList.length; i++) {
-            totalCredit += parseInt(marksList[i].credit);
-        };
-        // return console.log(sum);
-        for (let j = 0; j < marksList.length; j++) {
-            if (marksList[j].grade === 'A') marksList[j].grade = 4;
-            else if (marksList[j].grade === 'B') marksList[j].grade = 3;
-            else if (marksList[j].grade === 'C') marksList[j].grade = 2;
-            else marksList[j].grade = 0;
-            totalGradeCredit += marksList[j].grade * marksList[j].credit;
+        if (marksList == false) {
+            return Alert.alert('', 'Can not Compute untill course grade and credit is added first.', [
+                { text: 'OK', onPress: () => console.log('OK Pressed') },
+            ]);
         }
-        setGpa(Math.round((totalGradeCredit / totalCredit) * 10) / 10);
+        else {
+            Keyboard.dismiss();
+            let totalCredit = 0;
+            let totalGradeCredit = 0;
+            for (let i = 0; i < marksList.length; i++) {
+                totalCredit += parseInt(marksList[i].credit);
+            };
+            // return console.log(sum);
+            for (let j = 0; j < marksList.length; j++) {
+                if (marksList[j].grade === 'A') marksList[j].grade = 4;
+                else if (marksList[j].grade === 'B') marksList[j].grade = 3;
+                else if (marksList[j].grade === 'C') marksList[j].grade = 2;
+                else marksList[j].grade = 0;
+                totalGradeCredit += marksList[j].grade * marksList[j].credit;
+            }
+            setGpa(Math.round((totalGradeCredit / totalCredit) * 10) / 10);
+        }
     }
 
     const gpaClass = (value) => {
