@@ -12,9 +12,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 60000
-    },
+
     "assetBundlePatterns": [
       "**/*"
     ],
