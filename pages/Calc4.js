@@ -24,7 +24,7 @@ export default function Calc({ navigation, route }) {
 
     const handlePress = () => {
         // Keyboard.dismiss();
-        if (marks.grade == '' || marks.credit == '') {
+        if (marks.grade === '' || marks.credit === '') {
             return Alert.alert('', 'Add after every grade and credit inputted for every course, then finally compute for the GPA', [
                 { text: 'OK', onPress: () => console.log('OK Pressed') },
             ]);
@@ -51,7 +51,7 @@ export default function Calc({ navigation, route }) {
     }
 
     const handleCompute = () => {
-        if (marksList == false) {
+        if (marksList === false) {
             return Alert.alert('', 'Can not Compute untill course grade and credit is added first.', [
                 { text: 'OK', onPress: () => console.log('OK Pressed') },
             ]);
